@@ -1,0 +1,57 @@
+# Build artifacts
+/build/
+/bin/
+/out/
+/*.o
+/*.obj
+/*.a
+/*.so
+/*.dylib
+/*.dll
+/*.exe
+
+# Compiled object directories
+**/CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Generated dependency files
+*.d
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+# macOS
+.DS_Store
+
+# Debugging files
+.gdb_history
+
+# Repl / debug artifacts
+repl.dSYM/
+
+# Coverage and test output
+coverage/
+*.gcda
+*.gcno
+
+# Logs
+*.log
+
+# Temporary files
+*~
+# Backup files
+*.bak
+
+# Language-specific
+# pkg-config
+*.pc
+
+# Dist and package
+dist/
+
+# Ensure .gitignore itself is tracked
+!.gitignore
