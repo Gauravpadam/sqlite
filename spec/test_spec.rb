@@ -89,4 +89,31 @@ describe 'database' do
             "db > "
         ])
     end
+
+    it 'persists data after the program is closed' do
+
+        script1 = [
+            "insert 1 foo foo@bar",
+            ".exit"
+        ]
+
+        result1 = run_script(script1)
+        expect(result1).to match_array([
+            "db > Executed.",
+            "db > "
+        ])
+
+        script2 = [
+            "select",
+            ".exit"
+        ]
+        result2 = run_script(script2)
+        expect(result2).to match_array([
+            "db > (1, foo, foo@bar)",
+            "Executed.",
+            "db > "
+        ])
+    end
+
+    
 end
